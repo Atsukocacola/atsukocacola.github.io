@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+document.addEventListener('keydown', function(event)
+{
 
+  if(event.keyCode == 32) //space key
+    {
+      document.getElementById("playground_block").style.display = "block";
+    }
+});
+</script>
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
@@ -30,11 +39,6 @@ html
 {
   background-color: #78D5D9;
 }
-
-#aboutme.hover
-{
-
-}
 </style>
 </head>
 <body>
@@ -48,7 +52,7 @@ html
       </div>
       <div class="eight columns">
         <h1>@ t s u k o</h1>
-        <p style="font-size: 1.4em; font-family: AnonymousPro;">a designer studying computer science</p>
+        <p style="font-size: 1.4em; font-family: AnonymousPro, ClearSans-Light, Sans-serif;">a designer studying computer science</p>
       </div>      
     </div> <!-- row end-->
 
@@ -74,8 +78,26 @@ html
             <p id="button_description">github</p>
         </a>
       </div>
+    </div> <!-- row end-->
+
+    <div class="row" style="text-align: center;">
+      <div class="five columns">
+        <!-- Filler--><br>
+      </div>
+
+      <div class="two columns" id="playground_block" style="display:none;">
+        <a href="playground.html" style="text-decoration:none; color:white;">
+          <img id="playground" src="images/playground.png" onmouseover="this.src='images/playground_hover.png';" onmouseout="this.src='images/playground.png';"style="display: block; margin: auto;">
+          <p id="button_description">playground</p>
+        </a>
+      </div>
+      <div class="two columns">
+        <!-- Filler -->
+      </div>
+
 
     </div> <!-- row end-->
+
   </div>
 
 <!-- End Document

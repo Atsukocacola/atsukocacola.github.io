@@ -405,7 +405,7 @@ there.
 /* Larger than mobile */
 @media (min-width: 400px) {
 
-  #aboutme, #behance, #github
+  #aboutme, #behance, #github, #playground
   {
     width: 30%;
     padding-top: 5%;
@@ -424,7 +424,7 @@ there.
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
 
-  #aboutme, #behance, #github
+  #aboutme, #behance, #github, #playground
   {
     width: 100%;
   }
@@ -439,7 +439,7 @@ there.
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
-  #aboutme, #behance, #github
+  #aboutme, #behance, #github, #playground
   {
     width: 75%;
   }
