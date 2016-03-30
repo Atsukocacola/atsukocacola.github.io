@@ -9,6 +9,11 @@ document.addEventListener('keydown', function(event)
     {
       document.getElementById("playground_block").style.display = "block";
     }
+
+  if(event.keyCode == 37) //left arrow key
+    {
+      document.getElementById("notes_block").style.display = "block";
+    }
 });
 </script>
   <!-- Basic Page Needs
@@ -81,7 +86,7 @@ html
     </div> <!-- row end-->
 
     <div class="row" style="text-align: center;">
-      <div class="five columns">
+      <div class="three columns">
         <!-- Filler--><br>
       </div>
 
@@ -91,6 +96,14 @@ html
           <p id="button_description">playground</p>
         </a>
       </div>
+
+      <div class="two columns" id="notes_block" style="display:none;">
+        <a href="notes.html" style="text-decoration:none; color:white;">
+          <img id="notes" src="images/notes.png" onmouseover="this.src='images/notes_hover.png';" onmouseout="this.src='images/notes.png';"style="display: block; margin: auto;">
+          <p id="button_description">notes</p>
+        </a>
+      </div>
+
       <div class="two columns">
         <!-- Filler -->
       </div>
