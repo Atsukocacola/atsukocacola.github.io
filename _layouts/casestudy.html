@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="row" style="text-align: center">
+    <span class="h1">{{ page.title }}</span> <br>
+    <h2 style="font-size: 1.5rem; line-height: 175%"> {{ page.skills | join: '   |   '}} </h2>
+  </div>
+
+  <div class="row" style="padding-top: 1.5%">
+    <div class="two columns">
+        <p><!-- FILLER --></p>
+    </div>
+      <div class="five columns">
+          <span class="h3">ABOUT</span> <br>
+          <p> {{ page.about }} </p>
+      </div>
+      <div class="five columns">
+        <span class="h3">TOOLS</span> <br>
+        <p> {{ page.tools | join: ', ' }} </p>
+      </div>
+  </div>
+
+  <div class="row" style="padding-top: 5%">
+    <div class="twelve columns">
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="twelve columns">
+      <h2>PROGRESS</h2>
+      {{ content }}
+    </div>
+  </div>
+</div> <!-- Container end -->
+
+{% include prevnext.html %}

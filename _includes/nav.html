@@ -1,0 +1,23 @@
+<div class="row" id="nav">
+	<div class="container">
+
+    <div class="row">
+      <h2> <a id="name" href="/index.html">@tsuko</a></h2>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns">
+    		<nav>
+    			<ul>
+						<li><a id="navlink" href="/index.html#recentwork">WORK</a></li>
+    				<li><a id="navlink" href="{{ "/blog" | prepend: site.baseurl }}">BLOG</a></li>
+            {% for page in site.pages %} {% if page.title %}
+            <li><a id="navlink" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% endif %} {% endfor %}
+    			</ul>
+    		</nav>
+    </div> <!-- Columns end-->
+    </div> <!-- Row end-->
+
+	</div> <!-- Container end -->
+</div> <!-- Row end -->

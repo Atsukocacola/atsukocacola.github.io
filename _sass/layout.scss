@@ -1,0 +1,124 @@
+html, body {
+  font-family: $main_font, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: $text_color;
+}
+
+h1, h2, h3 {
+  letter-spacing: 1.5px;
+}
+h1 {
+  color: $main_color;
+  font-size: 4.5rem;
+  line-height: 120%;
+}
+
+.h1 {
+  @extend h1;
+}
+
+h2 {
+  color: $text_color;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+h3 {
+  color: $main_color;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.h3 {
+  @extend h3;
+}
+
+p {
+  color: $text_color;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.p {
+  @extend p;
+}
+
+a, a:visited {
+  color: $link_color;
+}
+
+a:hover {
+  @extend a;
+  opacity: 0.6;
+  transition: all 0.8s;
+}
+
+#nav {
+  background-color: $main_color;
+  padding-top: 7%;
+} #navlink, #navlink:visited {
+  @extend #nav;
+  background-color: none;
+  padding-top: 0;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+} #navlink:hover {
+  opacity: 0.6;
+  transition: all 0.8s;
+}
+
+#name {
+  @extend #navlink;
+  z-index: 1;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+} #name:hover {
+  opacity: 1.0;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 2%;
+}
+
+#wrapper { // Keeps the footer down
+  min-height: 100%;
+  position: relative;
+}
+
+#footer {
+  background-color: $footer_color;
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height: 100px;
+}
+
+#v-align {
+  position: relative;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.divider {
+  @extend #v-align;
+  background-color: $footer_color;
+  height: 10px;
+  width: 40px;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+#thumbnail {
+  width: 100%;
+}
+
+.portfolio_snippet {
+  padding-bottom: 5%;
+}

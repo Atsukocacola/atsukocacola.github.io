@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row" style="text-align: center">
+    <span class="h1">{{ page.title }}</span>
+    <time><h2>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</h2></time>
+  </div>
+
+  <div class="row">
+      <div class="twelve columns" style="text-align: center">
+          <div style="margin: 0 auto; margin-top: 2%; margin-bottom: 2%" class="divider"></div>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="one column">
+        <p><!-- FILLER --></p>
+    </div>
+    <div class="ten columns" style="text-align: center">
+      {{ content }}
+    </div>
+  </div> <!-- Row end -->
+
+  <div class="row">
+    <div class="six columns">
+      {% if post.previous.url %}
+      <a href="{{ page.previous.url }}"> &laquo; {{ post.previous.title }} </a>
+      {% else %}
+      <p><!-- FILLER--></p>
+      {% endif %}
+    </div>
+    <div class="six columns">
+      {% if post.next.url %}
+      <a style="float: right" href="{{ postr.next.url }}">{{ post.next.title }} &raquo;</a>
+      {% endif %}
+    </div>
+  </div>
+
+</div> <!-- Container end -->

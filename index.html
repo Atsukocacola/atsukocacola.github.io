@@ -1,119 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<script>
-document.addEventListener('keydown', function(event)
-{
+---
+layout: default
+---
+<div class="container">
+    <div class="row">
+    <h1>Hello! I'm Atsuko.</h1>
+    <p>I'm currently a computer science student who loves working on design projects!<br>
+      If you'd like to work with me, you can reach me at <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">ashimiz1@binghamton.edu</a>.</p>
+    </div>
+    <div class="divider"></div>
+</div> <!-- Container end -->
 
-  if(event.keyCode == 32) //space key
-    {
-      document.getElementById("playground_block").style.display = "block";
-    }
-
-  if(event.keyCode == 37) //left arrow key
-    {
-      document.getElementById("notes_block").style.display = "block";
-    }
-});
-</script>
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Atsuko Shimizu</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-<style>
-html
-{
-  background-color: #78D5D9;
-}
-</style>
-</head>
-<body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row" style="margin-top: 13%; text-align: center;">
-      <div class="two columns">
-        <!-- Filler--><br>
-      </div>
-      <div class="eight columns">
-        <h1>@ t s u k o</h1>
-        <p style="font-size: 1.4em; font-family: AnonymousPro, ClearSans-Light, Sans-serif;">a designer studying computer science</p>
-      </div>      
-    </div> <!-- row end-->
-
-    <div class="row" id="buttons" style="text-align: center;">
-      <div class="three columns">
-        <!-- Filler--><br>
-      </div>
-      <div class="two columns">
-        <a href="aboutme.html" style="text-decoration:none; color:white;">
-          <img id="aboutme" src="images/aboutme.png" onmouseover="this.src='images/aboutme_hover.png'; " onmouseout="this.src='images/aboutme.png';" style="display: block; margin: auto;" >
-          <p id="button_description">about me</p>
-        </a>
-      </div>
-      <div class="two columns">
-        <a href="https://www.behance.net/ashimizu5" style="text-decoration:none; color:white;">
-          <img id="behance" src="images/behance.png" onmouseover="this.src='images/behance_hover.png';" onmouseout="this.src='images/behance.png';"style="display: block; margin: auto;">
-          <p id="button_description">portfolio</p>
-        </a>
-      </div>
-      <div class="two columns">
-        <a href="https://github.com/Atsukocacola" style="text-decoration:none; color:white;">
-            <img id="github" src="images/github.png" onmouseover="this.src='images/github_hover.png'; " onmouseout="this.src='images/github.png';" style="display: block; margin: auto;">
-            <p id="button_description">github</p>
-        </a>
-      </div>
-    </div> <!-- row end-->
-
-    <div class="row" style="text-align: center;">
-      <div class="three columns">
-        <!-- Filler--><br>
-      </div>
-
-      <div class="two columns" id="playground_block" style="display:none;">
-        <a href="playground.html" style="text-decoration:none; color:white;">
-          <img id="playground" src="images/playground.png" onmouseover="this.src='images/playground_hover.png';" onmouseout="this.src='images/playground.png';"style="display: block; margin: auto;">
-          <p id="button_description">playground</p>
-        </a>
-      </div>
-
-      <div class="two columns" id="notes_block" style="display:none;">
-        <a href="notes.html" style="text-decoration:none; color:white;">
-          <img id="notes" src="images/notes.png" onmouseover="this.src='images/notes_hover.png';" onmouseout="this.src='images/notes.png';"style="display: block; margin: auto;">
-          <p id="button_description">notes</p>
-        </a>
-      </div>
-
-      <div class="two columns">
-        <!-- Filler -->
-      </div>
-
-
-    </div> <!-- row end-->
-
+<div class="container" id="recentwork">
+  <div class="row">
+  <h2>RECENT WORK</h2>
   </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-</html>
+  {% for case in site.casestudies %}
+  <div class="portfolio_snippet">
+    <div class="row" >
+      <div class="three columns">
+        <img class="u-max-full-width" src="{{ case.thumbnail_url | prepend: site.baseurl }}">
+      </div>
+      <div class="six columns">
+        <span class="h3">{{ case.title }}</span><br>
+        <span class="p">{{ case.blurb }}</span><br>
+        <span class="p"> <a href="{{ case.url | prepend: site.baseurl }}">Read more </a></span>
+      </div>
+    </div> <!-- Row end -->
+  </div> <!-- Portfolio snippet end -->
+  {% endfor %}
+
+<div class="row">
+  <p>To view my older design work, please visit my <a href="https://www.behance.net/ashimizu5">Behance</a> portfolio.</p>
+</div>
+</div> <!-- Container end -->

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <h1>Blog</h1>
+    <p>A place where I keep track of things I learn.</p>
+
+    <div class="divider" style="margin-top: 4%">
+    </div>
+
+    {% for post in site.posts %}
+    		<span class="h3"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span><br>
+        <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+    {% endfor %}
+  </div> <!-- Row end -->
+</div> <!-- Container end -->
