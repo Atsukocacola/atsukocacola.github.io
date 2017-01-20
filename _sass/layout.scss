@@ -58,6 +58,7 @@ a:hover {
 #nav {
   background-color: $main_color;
   padding-top: 7%;
+  padding-bottom: 2%;
 } #navlink, #navlink:visited {
   @extend #nav;
   background-color: none;
@@ -72,6 +73,12 @@ a:hover {
   transition: all 0.8s;
 }
 
+.navlink {
+  list-style-type: none;
+  display: inline;
+  padding-right: 2%;
+}
+
 #name {
   @extend #navlink;
   z-index: 1;
@@ -82,9 +89,8 @@ a:hover {
 }
 
 li {
-  list-style-type: none;
-  display: inline;
-  padding-right: 2%;
+  
+
 }
 
 #wrapper { // Keeps the footer down
