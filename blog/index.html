@@ -8,10 +8,13 @@ layout: default
 
     <div class="divider" style="margin-top: 4%">
     </div>
+  </div> <!-- Row end -->
 
     {% for post in site.posts %}
-    		<span class="h3"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span><br>
-        <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+  		<span class="h3" style="text-transform: none"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &nbsp;</span>
+      <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+
+      <br>
     {% endfor %}
-  </div> <!-- Row end -->
+
 </div> <!-- Container end -->
